@@ -13,3 +13,7 @@ TL:DR
 Don't say "Berkeley" when referring to UCB.
 
 [source](https://www.reddit.com/r/UCSD/comments/hcqnpx/psa_to_ucsd_students_from_the_berkeley_community/)
+
+[add the bot to your community](https://discord.com/api/oauth2/authorize?client_id=942694849663098902&permissions=3072&scope=bot)
+
+this bot is running on a free gcp engine btw so if u wanna [donate](https://ronakshah.net/donate) 🥺👉👈
