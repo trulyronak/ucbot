@@ -3,12 +3,6 @@ const Discord = require('discord.js');
 global.Discord = Discord;
 const bot = new Discord.Client();
 global.bot = bot;
-bot.commands = new Discord.Collection();
-const botCommands = require('./commands');
-
-Object.keys(botCommands).map(key => {
-  bot.commands.set(botCommands[key].name, botCommands[key]);
-});
 
 const ucbWords = ["berkeley", "berekeley", "cal"]
 const TOKEN = process.env.TOKEN;
@@ -20,7 +14,7 @@ bot.on('ready', () => {
 });
 
 bot.on('message', msg => {
-  const cleanedWords = msg.content.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").split(" ")
+  const cleanedWords = msg.content.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").split(/\W+/);
   const culprits = ucbWords.filter(val => cleanedWords.includes(val));
 
   if (culprits.length > 0) {
