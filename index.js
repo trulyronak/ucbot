@@ -17,7 +17,7 @@ bot.on('message', msg => {
   const cleanedWords = msg.content.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").split(/\W+/);
   const culprits = ucbWords.filter(val => cleanedWords.includes(val));
 
-  if cleanedWords.includes(" UCB") {
+  if (cleanedWords.includes("UCB") || cleanedWords.includes(" UCB")) {
     if (culprits.length == 0) {
       msg.react('❤️');
     } else {
