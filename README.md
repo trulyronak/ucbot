@@ -16,4 +16,11 @@ Don't say "Berkeley" when referring to UCB.
 
 [add the bot to your community](https://discord.com/api/oauth2/authorize?client_id=942694849663098902&permissions=3072&scope=bot)
 
+## The Bot in Action
+Ensures correct language
+![corrections](images/atharva_use.png)
+
+Rewards good behavior
+![ucb heart react](images/ucb_correct.png)
+
 Built by [Ronak Shah](https://ronakshah.net) and deployed by [Matei Gardus](https://gard.us/)
