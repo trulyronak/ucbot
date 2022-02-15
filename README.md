@@ -18,9 +18,22 @@ Don't say "Berkeley" when referring to UCB.
 
 ## The Bot in Action
 Ensures correct language
+
 ![corrections](images/atharva_use.png)
 
 Rewards good behavior
+
 ![ucb heart react](images/ucb_correct.png)
 
 Built by [Ronak Shah](https://ronakshah.net) and deployed by [Matei Gardus](https://gard.us/)
+
+
+## FAQs
+
+### Why Tho?
+Why not?
+
+### I think [word] should summon the bot
+Add other words to the `ucbWords` array in [`index.js`](https://github.com/trulyronak/ucbot/edit/main/index.js), then submit a pull request!
+
+Alternatively, you can [create an issue](https://github.com/trulyronak/ucbot/issues/new) and I'll add it for you.
