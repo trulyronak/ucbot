@@ -4,7 +4,7 @@ global.Discord = Discord;
 const bot = new Discord.Client();
 global.bot = bot;
 
-const ucbWords = ["berk", "berkeley", "berekeley", "cal"]
+const ucbWords = ["berk", "berkeley", "berekeley", "cal", "berkley", "ucberkeley", "ucberekely", "ucberkley"]
 const TOKEN = process.env.TOKEN;
 
 bot.login(TOKEN);
