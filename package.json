@@ -9,7 +9,7 @@
   "author": "Ronak Shah",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^11.5.1",
+    "discord.js": "^12.0.0",
     "dotenv": "^8.2.0"
   }
 }
