@@ -14,22 +14,27 @@ bot.on('ready', () => {
 });
 
 bot.on('message', msg => {
-  if (msg.author.bot) return;
-  const cleanedWords = msg.content.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").split(/\W+/);
-  const culprits = ucbWords.filter(val => cleanedWords.includes(val));
+  try {
+    if (msg.author.bot) return;
+    const cleanedWords = msg.content.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").split(/\W+/);
+    const culprits = ucbWords.filter(val => cleanedWords.includes(val));
 
-  if (cleanedWords.includes("ucb")) {
-    if (culprits.length == 0) {
-      msg.react('❤️');
-    } else {
-      msg.reply(`Thanks for referring to UCB as UCB on the internet, but make sure to be consistent; always do it.
-I am a bot, and this action was performed automatically. Please contact Daddy Khosla if you have any questions or concerns.`);
+    if (cleanedWords.includes("ucb")) {
+      if (culprits.length == 0) {
+        msg.react('❤️');
+      } else {
+        msg.reply(`Thanks for referring to UCB as UCB on the internet, but make sure to be consistent; always do it.
+  I am a bot, and this action was performed automatically. Please contact Daddy Khosla if you have any questions or concerns.`);
+      }
+      return;
     }
-    return;
-  }
 
-  if (culprits.length > 0) {
-    msg.reply(`Please refer to UCB as UCB on the internet.
-I am a bot, and this action was performed automatically. Please contact Daddy Khosla if you have any questions or concerns.`)
+    if (culprits.length > 0) {
+      msg.reply(`Please refer to UCB as UCB on the internet.
+  I am a bot, and this action was performed automatically. Please contact Daddy Khosla if you have any questions or concerns.`)
+    }
+  } catch (err) {
+    console.log("ah fuck, I can't believe you've done this!");
+    return;
   }
 });
