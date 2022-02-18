@@ -26,14 +26,14 @@ bot.on('message', async msg => {
         await msg.react('🇨');
         await msg.react('🇧');
       } else {
-        msg.reply(`[debug] Thanks for referring to UCB as UCB on the internet, but make sure to be consistent; always do it.
+        msg.reply(`Thanks for referring to UCB as UCB on the internet, but make sure to be consistent; always do it.
   I am a bot, and this action was performed automatically. Please contact Daddy Khosla if you have any questions or concerns.`);
       }
       return;
     }
 
     if (culprits.length > 0) {
-      msg.reply(`[debug] Please refer to UCB as UCB on the internet.
+      msg.reply(`Please refer to UCB as UCB on the internet.
   I am a bot, and this action was performed automatically. Please contact Daddy Khosla if you have any questions or concerns.`)
     }
   } catch (err) {
